@@ -157,4 +157,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_SESSION_REMEMBER = True
 
-ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+ACCOUNT_LOGIN_METHODS = {'email'}
+ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*']
+ACCOUNT_UNIQUE_EMAIL = True
