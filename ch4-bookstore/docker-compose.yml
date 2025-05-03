@@ -11,7 +11,13 @@ services:
       - db
     environment:
       - 'DJANGO_SECRET_KEY=django-insecure-db2g)x@w@my1ew-9r&#3$$o*vyl-jsy5iv%z-3$$t_jwi7b4sl$$l'
-      - 'DJANGO_DEBUG=True'
+      - 'DJANGO_DEBUG=True' # Set to False in production in docker-compose-prod.yml or settings.py
+      - 'DJANGO_SECURE_SSL_REDIRECT=False'
+      - 'DJANGO_SECURE_HSTS_SECONDS=0'
+      - 'DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS=False'
+      - 'DJANGO_SECURE_HSTS_PRELOAD=False'
+      - 'DJANGO_SESSION_COOKIE_SECURE=False'
+      - 'DJANGO_CSRF_COOKIE_SECURE=False'
       - 'EMAIL_HOST=smtp.gmail.com'
       - 'EMAIL_PORT=587'
       - 'EMAIL_HOST_USER=tkarakavuz@gmail.com'
