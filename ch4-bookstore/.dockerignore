@@ -1,3 +1,9 @@
 .venv
 .git
 .gitignore
+.env
+.env.dev
+.env.prod
+.vscode
+.DS_Store
+__pycache__
